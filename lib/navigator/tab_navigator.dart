@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:package_info/package_info.dart';
+import '../pages/home_page.dart';
+import '../pages/search_page.dart';
+import '../pages/travel_page.dart';
+import '../pages/my_page.dart';
 
 class TabNavigator extends StatefulWidget {
   @override
@@ -65,7 +69,10 @@ class _TabNavigatorState extends State<TabNavigator> {
           physics: NeverScrollableScrollPhysics(),
           controller: _controller,
           children: <Widget>[
-
+            HomePage(),
+            SearchPage(),
+            TravelPage(),
+            MyPage(),
           ],
         ),
         onWillPop: exitApp,
